@@ -1,63 +1,16 @@
-# Nuxt 3 Minimal Starter
+# QRCodeVue3 Nuxt3 build and preview issue example
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repository shows that https://github.com/scholtz/qrcode-vue3 works fine in Nuxt3 app when running dev task, but
+failed when running build and preview task.
 
-## Setup
++ dev: 
+  ![dev.gif](./docs/dev.gif)
 
-Make sure to install the dependencies:
++ build + preview:
+  ![build-and-preview.gif](./docs/build-and-preview.gif)
 
-```bash
-# npm
-npm install
+The error message is:
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+> [nuxt] [request error] [unhandled] [500] The requested module 'qrcode-vue3' does not provide an export named 'default'
+at ModuleJob._instantiate (node:internal/modules/esm/module_job:124:21)
+at async ModuleJob.run (node:internal/modules/esm/module_job:190:5)
